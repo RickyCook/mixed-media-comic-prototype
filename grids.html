@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8" />
+	
+	<!---------------------------------------------------------------------------
+
+
+	 {REP:SITE_NAME} :: Basic Page
+	 {REP:SITE_URL}
+
+		* Copyright (c) 2012 {REP:SITE_COPYRIGHT}. All Rights Reserved.
+
+		  Except as permitted under the Australian Copyright Act 1968 (for 
+		  example for the services of the Crown or in  reliance on one of the 
+		  fair dealing exceptions i.e. a fair dealing for the purposes of 
+		  research or study) no part of this website may be reproduced, stored 
+		  in a retrieval system, communicated or transmitted in any form or by 
+		  any means without prior written permission. All inquiries should be 
+		  made to the copyright owner at {REP:SITE_CONTACT}
+
+		* Site designed and managed by Hotpot Creative (http://www.hotpotcreative.com.au)
+		* Design by Chris McKenna <chris@hotpotcreative.com.au>
+		* Code by Ricky Cook <ricky@hotpotcreative.com.au>
+
+	--------------------------------------------------------------------------->
+	<meta name="copyright" content="Copyright (c) 2011 {REP:SITE_COPYRIGHT}. All Rights Reserved." />
+	
+	<!-- Small devices set viewscreen scale -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Title -->
+	<title>{REP:SITE_TITLE}</title>
+	<meta name="title" content="{REP:SITE_TITLE}" />
+	
+	<!-- SEO -->
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+	<!-- Google services -->
+	<meta name="google-site-verification" content="" />
+	
+	<!-- Styles -->
+	<link rel="stylesheet/less" type="text/css" href="less/hotpot_common.less" />
+	
+	<script src="js/less.js" type="text/javascript"></script>
+	
+	<!-- Site icons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57-precomposed.png">
+	
+	<!-- HTML5 shim -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+</head>
+<body id="grids">
+	<div class="container">
+		<div id="header" class="hero-unit">
+			<h1>Mixed Media Comic - Grids</h1>
+		</div>
+		<div class="row">
+			<div class="span12">This example of the grid layouts show that pretty much any layout you can think of is possible. The animation transitions are simple and can resize any of the tiles. To view the animated transitions, mouse over the grey boxes. For a better understanding of the use of this grid, see the <a href="content.html">content example</a>.</div>
+		</div>
+		<div class="row">
+			<div class="vsplit4">
+				<div class="panel height4 span4"></div>
+				<div class="panel height2 span4"></div>
+			</div>
+			<div class="vsplit4">
+				<div id="panel-small-ani1" class="panel height2 span4 anioff"></div>
+				<div id="panel-large-ani1" class="panel height3 span4"></div>
+			</div>
+			<div id="panel-right1" class="panel height5 span2"></div>
+			<div id="panel-right2" class="panel height5 span2"></div>
+			<div class="vsplit8">
+				<span id="panel-small-ani2" class="panel height1 span2 phantomheight0 anioff"></span>
+				<span id="panel-large-ani2" class="panel height1 span6"></span>
+			</div>
+		</div>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	
+	<!-- Fallbacks if we can't load from google -->
+	<script>window.jQuery || document.write("<script src='js/jquery-1.8.3.min.js'>\x3C/script>")</script>
+	<script>window.jQuery.ui || document.write("<script src='js/jquery-ui-1.9.2.min.js'>\x3C/script>")</script>
+	
+	<!-- No script detection for CSS -->
+	<script>
+		$(document).ready(function() {
+			var l1 = $('#panel-large-ani1'),
+			    s1 = $('#panel-small-ani1'),
+			    l2 = $('#panel-large-ani2'),
+			    s2 = $('#panel-small-ani2'),
+			    r1 = $('#panel-right1'),
+			    r2 = $('#panel-right2');
+			s1.mouseover(function() {
+				l1.switchClass('height3', 'height2');
+				s1.switchClass('height2', 'height3');
+				s1.switchClass('anioff', 'anion', 10000, function() {
+					s1.switchClass('anion', 'anioff', 0);
+					l1.switchClass('height2', 'height3');
+					s1.switchClass('height3', 'height2');
+				});
+			});
+			s2.mouseover(function() {
+				l2.switchClass('span6', 'span3');
+				s2.switchClass('span2 height1 phantomheight0', 'span5 height2 phantomheight1');
+				r1.switchClass('height5', 'height4');
+				l1.switchClass('height3', 'height2');
+				s2.switchClass('anioff', 'anion', 10000, function() {
+					s2.switchClass('anion', 'anioff', 0);
+					l2.switchClass('span3', 'span6');
+					s2.switchClass('span5 height2 phantomheight1', 'span2 height1 phantomheight0');
+					r1.switchClass('height4', 'height5');
+					l1.switchClass('height2', 'height3');
+				});
+			});
+		})
+	</script>
+</body>
+</html>

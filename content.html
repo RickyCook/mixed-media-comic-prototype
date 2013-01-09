@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8" />
+	
+	<!---------------------------------------------------------------------------
+
+
+	 {REP:SITE_NAME} :: Basic Page
+	 {REP:SITE_URL}
+
+		* Copyright (c) 2012 {REP:SITE_COPYRIGHT}. All Rights Reserved.
+
+		  Except as permitted under the Australian Copyright Act 1968 (for 
+		  example for the services of the Crown or in  reliance on one of the 
+		  fair dealing exceptions i.e. a fair dealing for the purposes of 
+		  research or study) no part of this website may be reproduced, stored 
+		  in a retrieval system, communicated or transmitted in any form or by 
+		  any means without prior written permission. All inquiries should be 
+		  made to the copyright owner at {REP:SITE_CONTACT}
+
+		* Site designed and managed by Hotpot Creative (http://www.hotpotcreative.com.au)
+		* Design by Chris McKenna <chris@hotpotcreative.com.au>
+		* Code by Ricky Cook <ricky@hotpotcreative.com.au>
+
+	--------------------------------------------------------------------------->
+	<meta name="copyright" content="Copyright (c) 2011 {REP:SITE_COPYRIGHT}. All Rights Reserved." />
+	
+	<!-- Small devices set viewscreen scale -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Title -->
+	<title>{REP:SITE_TITLE}</title>
+	<meta name="title" content="{REP:SITE_TITLE}" />
+	
+	<!-- SEO -->
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+	<!-- Google services -->
+	<meta name="google-site-verification" content="" />
+	
+	<!-- Styles -->
+	<link rel="stylesheet/less" type="text/css" href="less/hotpot_common.less" />
+	<link rel="stylesheet" type="text/css" href="http://vjs.zencdn.net/c/video-js.css" />
+	
+	<script src="js/less.js" type="text/javascript"></script>
+	
+	<!-- Site icons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57-precomposed.png">
+	
+	<!-- HTML5 shim -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+</head>
+<body id="content">
+	
+	<div class="container">
+		<div id="header" class="hero-unit">
+			<h1>Mixed Media Comic - Content</h1>
+		</div>
+		<div class="row">
+			<div class="span12">This example of the content shows an animation embedded in static images representing the comic. Clicking the video box will expand and play it. For more examples of the flexibility of the grids, see the <a href="grids.html">grids example</a>.</div>
+		</div>
+		<div class="row">
+			<div class="panel span6 height2" style="background-image: url(comic_snips/vlcsnap-2012-12-29-00h06m09s223.png); background-size: 500px; background-position: 0px -50px"></div>
+			<div class="panel span6 height2" style="background-image: url(comic_snips/vlcsnap-2012-12-29-00h07m21s184.png); background-size: 700px; background-position: -100px -100px"></div>
+			<div class="panel span12 height3" style="background-image: url(comic_snips/vlcsnap-2012-12-29-00h07m37s105.png); background-size: 1000px; background-position: 0px -160px"></div>
+			<div class="panel span4 height7" style="background-image: url(comic_snips/vlcsnap-2012-12-29-00h07m49s2.png); background-size: 900px; background-position: -90px -20px"></div>
+			<div class="vsplit8">
+				<div id="vid1-panel1" class="panel span8 height3" style="background-image: url(comic_snips/vlcsnap-2012-12-29-00h08m20s8.png); background-size: 900px; background-position: -70px -170px"></div>
+				<!--<div class="span8 height4" style="background-image: url(comic_snips/vlcsnap-2012-12-29-00h08m54s118.png); background-size: 900px; background-position: -90px -20px"><h2 style="text-align: center; padding-top: 50px;">VIDEO</h2></div>-->
+				<div id="vid1-container" class="panel span8 height4" style="position: relative">
+					<i class="icon-film" style="position:absolute; right:5px; top:5px; z-index:10;"></i>
+					<video id="vid1-ani" class="video-js vjs-default-skin" preload="auto" width=620 height=380 poster="comic_snips/vlcsnap-2012-12-29-00h08m54s118.png" data-setup="{}">
+						<!-- avconv -i Kung\ Fu\ Panda\ 2008\ 1080p.m2ts -vcodec libvpx -acodec libvorbis -ac 2 -vf crop=1920:816:0:138,scale=620:380 -s 620x380 -aspect 620:380 -ss 00:01:16.500 -t 00:00:09.8 out.webm -->
+						<!-- avconv -i Kung\ Fu\ Panda\ 2008\ 1080p.m2ts -vcodec libvpx -acodec libvorbis -ac 2 -vf crop=1920:816:0:138,scale=620:380 -ss 00:01:16.500 -t 00:00:09.8 out.webm -->
+						<source src="comic_snips/out.webm" type="video/webm"/>
+						
+						<!-- avconv -i Kung\ Fu\ Panda\ 2008\ 1080p.m2ts -acodec copy -ac 2 -vf crop=1920:816:0:138,scale=620:380 -s 620x380 -aspect 620:380 -ss 00:01:16.500 -t 00:00:09.8 out.mp4 -->
+						<!--<source src="comic_snips/out.mp4" type="video/mp4"/>-->
+						<!--<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />-->
+					</video>
+				</div>
+			</div>
+			<div class="panel span12 height4" style="background-image: url(comic_snips/vlcsnap-2012-12-29-00h09m19s138.png); background-size: 960px; background-position: 0px -150px"></div>
+			<div class="span12 height1"><h2 style="text-align: center;">- THE END -</h2></div>
+		</div>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<script src="//vjs.zencdn.net/c/video.js"></script>
+	
+	<!-- Fallbacks if we can't load from google -->
+	<script>window.jQuery || document.write("<script src='js/jquery-1.8.3.min.js'>\x3C/script>")</script>
+	<script>window.jQuery.ui || document.write("<script src='js/jquery-ui-1.9.2.min.js'>\x3C/script>")</script>
+	
+	<!-- No script detection for CSS -->
+	<script>
+		function isValue(val) {
+			switch ($.type(val)) {
+				case 'undefined':
+				case 'null':
+					return false
+				default:
+					return true
+			}
+		}
+		function def(val, def) {
+			return isValue(val) ? val : def
+		}
+		
+		function isConfigReady(config) {
+			return !isValue(config.ready) || config.ready
+		}
+		
+		function setPanelClickable(el, enabled, enabledcursor, disabledcursor) {
+			// Set the cursor
+			var cursor = enabled ? 
+				def(enabledcursor, 'pointer') :
+				def(disabledcursor, 'default')
+			el.css('cursor', cursor)
+			
+			// Remove actionable hint if not enabled
+			if (!enabled) config.container.find('i.icon-film').removeClass('icon-white')
+		}
+		function getVideoStartHandler(config) {
+			return function() {
+				doVideoPlay(config)
+			}
+		}
+		function doVideoPlay(config) {
+			var originalChanges = config.changes,
+			    revertChanges, videoEndedHandler
+			
+			// Don't do anything if not ready
+			if (!isConfigReady(config)) return
+			
+			// Set not ready and remove actionable hints
+			config.ready = false
+			setPanelClickable(config.container, false)
+			
+			// Perform panel changes and store reversions for later
+			revertChanges = doExpansionSet(config)
+			
+			// Create a video end handler to revert changes
+			videoEndedHandler = function() {
+				config.changes = revertChanges
+				doExpansionSet(config, function() {
+					// After revert animation is compoleted, set ready and change to actionable again
+					config.ready = true
+					setPanelClickable(config.container, true, config.cursor)
+				})
+				config.changes = originalChanges
+			}
+			
+			// Either play the video and revert on end, or revert right away (no video)
+			if(isValue(config.video)) {
+				config.video.play()
+				config.video.addEvent('ended', videoEndedHandler)
+			} else {
+				videoEndedHandler()
+			}
+		}
+		function doExpansionSet(config, callback) {
+			var configOriginal, changesRunning, callbackWrapper
+			if ($.isArray(config.changes)) {
+				configOriginal = []
+				changesRunning = config.changes.length
+				
+				// If there's a callback, wrap it in the counter decrement callback
+				if (isValue(callback)) {
+					callbackWrapper = function() {
+						changesRunning--
+						if (changesRunning === 0) callback()
+					}
+				} else {
+					callbackWrapper = function() {}
+				}
+				
+				// Do panel expansion for all changes in the set
+				$.each(config.changes, function(idx,changeConfig) {
+					configOriginal[idx] = doPanelExpansion(changeConfig, callbackWrapper)
+				})
+			}
+			return configOriginal
+		}
+		function doPanelExpansion(config, callback) {
+			var e = config.element,
+			    ct = config.changeto,
+			    cf = {},
+			    time = def(config.time, 250),
+			    classes = e.attr('class').split(' '),
+			    fromstring = '', tostring = ''
+			
+			// Iterate all changeto values to find current vals
+			$.each(ct, function(k,v) {
+				
+				// Match current classes
+				var regex = new RegExp('^' + k + '([0-9]*)$');
+				$.each(classes, function(i,cl) {
+					var matches = cl.match(regex)
+					if ($.type(matches) === 'array' && matches.length === 2) {
+						
+						// Add to the changefrom array and break
+						cf[k] = parseInt(matches[1])
+						return 0;
+					}
+				})
+			})
+			
+			// Iterate all found changefrom values and create from and to strings
+			$.each(cf, function(k,v) {
+				if (fromstring.length != 0) fromstring += ' '
+				if (tostring.length != 0) tostring += ' '
+				fromstring += k + v
+				tostring += k + ct[k]
+			})
+			
+			e.switchClass(fromstring, tostring, time)
+			
+			// As of writing, there is no switchClass "complete" callback
+			if (isValue(callback))
+				setTimeout(callback, time)
+			
+			// Return the config to change back
+			return {
+				element: e,
+				changeto: cf
+			}
+		}
+		
+		$(document).ready(function() {
+			var vid1_container = $('#vid1-container'),
+				vid1_config = {
+					video: _V_('vid1-ani'),
+					cursor: 'pointer',
+					container: vid1_container,
+					changes: [
+						{
+							element: vid1_container,
+							changeto: { height: 5 }
+						},
+						{
+							element: $('#vid1-panel1'),
+							changeto: { height: 2 }
+						}
+					]
+				}
+			setPanelClickable(vid1_container, true, vid1_config.cursor)
+			vid1_container.click(getVideoStartHandler(vid1_config))
+			vid1_container.mouseover(function() {
+				if (isConfigReady(vid1_config))
+					vid1_container.find('i.icon-film').addClass('icon-white')
+			})
+			vid1_container.mouseleave(function() {
+				vid1_container.find('i.icon-film').removeClass('icon-white')
+			})
+		})
+	</script>
+</body>
+</html>
